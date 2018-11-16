@@ -1,2 +1,8 @@
 # fonZ
-fonZ searches among the installed fonts and the user can choose among those found which one to use for the web page / html css javascript 
+searches among the installed fonts
+and let the user choose
+among those found
+which one to use
+for the website
+
+/ html css javascript 
