@@ -1,8 +1,8 @@
 # fonZ
-searches among the installed fonts
-and let the user choose
-among those found
-which one to use
-for the website
+searches among the installed fonts <br>
+and let the user choose<br>
+among those found<br>
+which one to use<br>
+for the website<hr>
 
-/ html css javascript 
+/ html css javascript <br>
