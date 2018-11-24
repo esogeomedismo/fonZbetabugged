@@ -6,4 +6,5 @@ which one to use<br>
 for the website<hr>
 
 / html css javascript <hr>
-demo: https://esogeomedismo.org/fonZ/fonZbetazero.html
+demo: https://esogeomedismo.org/fonZ/fonZbetazero.html <hr>
+new demo: https://fonz.esogeomedismo.org/
