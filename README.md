@@ -11,7 +11,10 @@ new demo: https://fonz.esogeomedismo.org/
 
 a couple of images of fonZ in action:
 
-![Image of fonZaction1] (https://fonz.esogeomedismo.org/img/fonZaction1.png) 
+![Image of fonZaction1] (https://fonz.esogeomedismo.org/img/fonZaction1.png)
+
+seems don't work!
+also this ![Image of fonZ in action 1] (https://fonz.esogeomedismo.org/img/fonZaction1.png)
 
 ![Image of fonZaction2] (https://fonz.esogeomedismo.org/img/fonZaction2.png)
 
