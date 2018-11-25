@@ -32,10 +32,9 @@ done<br><br>
 
 ## Add other name fonts<br>
 
-add the names to the script for fonts where are stored the existing fonts and in the same format i.e. 'a fonts','another','serif','etc etc',<br><br>
-
+add the names to the script for fonts where are stored the existing fonts and in the same format i.e. 'a fonts','another','serif','etc etc',<br>
 for now fonZ support until 324 fonts <br>
-but is quite simple enlarge that limit
+but is quite simple enlarge that limit <br>
 
 
 demo: https://esogeomedismo.org/fonZ/fonZbetazero.html <hr>
