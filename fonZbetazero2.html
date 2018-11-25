@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      
+
+    
+    <title>fonz test1 beta zeta</title>
+    
+    <meta name="description" content="fonz cerca caratteri">
+    
+
+<!-- leva roba<script  src="JS/DragModNew.js"></script>  eso   -->
+    
+    
+    <style>
+
+    /*Inizio opzioni Glop*/
+    
+    
+/*Jerry Masslo di mondoquarto.org settembre 2005 per Piastrine Logorroiche
+
+primo adattamento  dic 2007 questo terzo marzo 2010, aka africano aka jedmo akaka me, jecodeee operation---------------
+
+ora funzione cerca caratteri da glop per fonz da esogeomedismo 2018 
+*/
+<!-- -->
+
+
+/*pannello stile*/
+
+
+
+#opzioni {
+position:fixed;
+top:0;
+left:1em;
+border-bottom-left-radius:.4em;
+border-bottom-right-radius:.4em;
+text-align:center;
+visibility:hidden;
+width:14em;
+padding:.4em;
+background-color:rgba(116, 111, 111, 0.9);
+font-size:1.4em;
+z-index:102;
+}
+
+#opzioni ul {
+list-style-type:none;
+margin-top:.2em
+
+}
+
+#opzioni li {
+padding:.1em;
+margin:.1em;
+display:inline-block;
+width:auto;
+}
+
+
+
+#opzioni a {
+text-decoration:none;
+padding:.2em;
+border-radius:.2em;
+background-color:dimgrey;
+color:deepskyblue;
+}
+#opzioni a.attuale {
+background-color:#bdb76b;
+color:dimgrey;
+}
+
+#stilante {
+position:absolute;
+z-index:101;
+top:.3em;
+left:.1em;
+padding:0 .6em .1em .2em;
+font-size:1.4em;
+/*border:.2em solid whitesmoke;
+border-radius:.4em;*/
+}
+
+#stilante:hover {
+}
+
+#stilante a {
+line-height:1.4em;
+color:whitesmoke;
+display:inline-block;
+text-decoration:none;
+/*background-color:#616273;*/
+background-color:#888e69;
+/*border:.2em solid #616273;*/
+font-style:normal;
+border-radius:.4em;
+/*border-top:.2em solid #66ACF7;*/
+}
+#stilante a:hover {
+font-style:oblique;
+
+}
+.effe {
+font-variant:small-caps;
+font-family:sans-serif;
+font-size:2em;
+font-style:normal;
+text-shadow: 0 5px whitesmoke;
+
+}
+.oo {
+font-family:monospace;
+font-weight:lighter;
+font-size:1.6em;
+font-style:normal;
+text-shadow: 5px 0 whitesmoke;
+position:relative;
+bottom:.1em;
+}
+.enne {
+font-style:normal;
+font-weight:bold;
+/*font-family:sans-serif;*/
+font-size:1.4em;
+position:relative;
+top:.1em;
+left:4px;
+text-shadow: 5px 0 whitesmoke;
+}
+.zeta {
+display:inline-block;
+font-family:sans-serif;
+font-weight:bold;
+min-width:.8em;
+line-height:.8em;
+font-size:2em;
+position:relative;
+top:-.2em;
+left:7px;
+text-shadow:6px 0 #888e69;
+color:#888e69;
+background-color:deepskyblue;
+/*border:.2em solid deepskyblue;*/
+border-radius:.5em;
+}
+span .zeta:hover {
+font-style:oblique;
+}
+#nojs {
+text-align:justify;
+background-color:rgba(255, 200, 200, 0.6);
+color:dimgrey;
+border-radius:.4em;
+position:relative;
+z-index:101;
+top:-3em;
+max-width:6em;
+font-size:.7em;
+padding:.1em;
+margin:.1em;
+font-weight:bold;
+text-shadow:whitesmoke .07em .07em; 
+}
+
+.macca {
+display:block;
+padding:.2em;
+background-color:orange;;
+
+}
+
+
+#stili {
+width:auto;
+min-height:1em;
+position:relative;
+z-index:131;
+}
+#stili li {
+min-width:1em;
+min-height:1em;
+font-weight:bold;
+text-align:justify;
+}
+
+.chiudi {
+min-width:1em;
+font-size:1.4em;
+display:inline-block;
+float:right;
+font-family:sans-serif;
+margin-bottom:.4em;
+}
+
+
+
+#stili li a {
+
+}
+
+#stili li a:hover {
+background:#bdb76b;
+color:whitesmoke;
+}
+
+
+
+#caratterizza {
+text-align:left;
+width:22em;
+max-height:22em;
+overflow-y:auto;
+background-color:rgba(61, 58, 41, 0.9);
+min-height:12em;
+position:absolute;
+top:.2em;
+left:15em;
+border:.6em solid #BDB76B;
+border-radius:.2em;
+z-index:90;
+color:orange;
+}
+#caratterizza a {
+float:left;
+margin:.1em;
+}
+#caratterizza a:hover {
+background:#bdb76b;
+color:whitesmoke;
+}
+#risc a:hover, #cisc a:hover {
+background:#bdb76b;
+color:whitesmoke;
+}
+#caratterizza .cerca {
+display:inline-block;;
+background:#BDB76B;
+color:gray;
+font-size:2em;
+min-width:8em;
+text-align:center;
+padding:.6em;
+margin:0;
+position:absolute;
+top:.6em;
+left:.6em;
+}
+#caratterizza .trovato {
+display:inline-block;
+position:absolute;
+top:.6em;
+right:.4em;
+background:gray;
+color:#BDB76B;
+padding:.6em;
+font-size:2.3em;
+margin:0;
+}
+.trovato span {
+font-size:.2em;
+color:#BDB76B;
+}
+.caratteri {
+position:relative;
+z-index:121;
+font-weight:bold;
+}
+#frena {
+position:absolute;
+top:1.6em;
+left:22em;
+display:block;
+z-index:100;
+display:none;
+}
+#frena a {
+display:inline-block;
+}
+
+
+.clear {
+clear:both;
+}
+
+#glop {
+padding:.6em;
+background:dimgray;
+color:coral;
+/*float:right;*/
+font-size:.7em;
+line-height:.8em;
+border-radius:.4em;
+}
+
+#glop a:hover {
+background:#bdb76b;
+color:whitesmoke;
+}
+#infonz {
+background-color:dimgray;
+color:orange;
+border-radius:.2em;
+
+}
+#infonz span {
+color:olive;
+font-weight:bold;
+background:wheat;
+border-radius:.1em;
+margin-left:.2em;
+margin-right:.2em;
+padding-left:.2em;
+padding-right:.2em;
+}
+
+#infonz a {
+background-color:coral;
+color:dimgray;
+border-radius:.4em;
+display:inline;
+font-size:1.4em;
+}    
+    
+    /*fine opzioni*/
+* {
+margin:0;
+}
+html {
+/*  scroll-behavior:smooth;*/
+}
+body {
+background:url(img/chineseCloudsB4.svg) no-repeat top right fixed #ffe6d5;
+background-size:cover;
+font-family:sans-serif;
+}    
+footer {
+background:url(img/chineseCloudsB4.svg) no-repeat bottom right;
+background-size:cover;
+min-height:44em;
+}
+
+h1 {
+color:#7a6f6d;
+font-size:3em;
+padding:1em;
+margin:1em;
+
+}
+h2 {
+color:#888e69; 
+padding:.4em;
+font-weight:bold;
+font-size:2em;
+}
+h3 {
+padding:.4em;
+font-size:1.6em;
+font-weight:bold;
+color:whitesmoke;
+background:#888e69; 
+border-top-right-radius:.4em;
+border-top-left-radius:.4em;
+}
+
+#iddu {
+display:grid;
+grid-template-columns: auto auto auto;
+justify-content:center;
+/*background-color:rgba(240, 235, 233, 0.1);*/
+border-radius:.3em;
+}
+#iddu p {
+background:#ffe6d5;
+}
+#tutto {
+max-width:66em;
+padding:1em;
+margin:auto;
+color:dimgrey;
+}
+section {
+width:22em;
+border-radius:.1em;
+/*background-color:rgba(240, 235, 233, 0.6);*/
+
+/*border-radius:2em;*/
+margin:.4em;
+
+
+}
+header {
+text-align:center;
+}
+
+p {
+font-size:1.4em;
+background-color:whitesmoke;
+padding:.6em;
+border-bottom-left-radius:.4em;
+border-bottom-right-radius:.4em; 
+}    
+article {
+background-color:whitesmoke;
+padding:2em;
+max-width:60em;
+margin:auto;
+}
+
+
+.prova {
+width:820px;
+background:orange;
+display:none;
+
+}
+.prova2 {
+background:gray;
+width:1240px;
+display:none;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 758px) {
+
+#iddu {
+grid-template-columns: auto;
+}
+} 
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 500px) {
+
+#tutto {
+font-size:1.1em;
+}
+} 
+
+
+@media only screen and (min-width:758px) { 
+  #tutto {
+
+font-size:1em;
+}
+#iddu {
+grid-template-columns: auto auto;
+}
+}
+
+@media only screen and (min-width:858px) { 
+  #tutto {
+font-size:1.1em;
+}
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1088px) {
+#tutto {
+font-size:1em;
+
+
+}
+#iddu {grid-template-columns: auto auto auto;}
+/*align-content:center;
+validatore dice no
+*/
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width:1280px) {
+#tutto {
+font-size:1.2em;
+}
+} 
+
+/* Extra extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width:1480px) {
+#tutto {
+font-size:1.3em;
+}
+} 
+/* Extra extra extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width:1720px) {
+#tutto {
+font-size:1.4em;
+}
+}  
+    
+    
+    </style>
+
+    
+</head>
+
+<body>
+<header>
+         <h1>
+just another project named fonz         
+         </h1>
+</header>
+<div class="prova">
+prova pixel em non vogliamo usare i px
+</div>
+
+<div class="prova2">
+prova pixel em non vogliamo usare i px
+</div>
+<div id="tutto">
+<div id="iddu">
+      <section>
+      <h3> ...</h3>
+     <p>.............
+     ...............
+    ..</p>
+      </section>
+             <section>
+      <h3>Reddito Biologico Universale 
+      ...</h3>
+     <p>
+     prima dell'industria e del digitale e delle tecnologie moderne<br/>
+     quindi nei tempi passati<br/>
+     l'economia era limitata dai mezzi disponibili<br/>
+     la produzione era insufficiente<br/>
+     molto lavoro era speso come forza motrice<br/>
+     il divario tra disponibilità e richiesta di risorse 
+     .............
+     ...............
+     ..........</p>
+      </section>       
+            <section>
+      <h3> Moneta Biologica</h3>
+     <p>una moneta è biologica se si usura col tempo e/o gli scambi<br>
+     ciò permette di emettere nuova moneta senza causare inflazione<br>
+     e superare la necessità del fisco....
+     ...............
+     ..........</p>
+      </section>
+           <section>
+      <h3> ...</h3>
+     <p>.............
+     ...............
+     ..........</p>
+      </section>       
+       <section>
+      <h3> Nuvolone & Universal Resource</h3>
+     <p>Nuvolone e Risorse Universali o Global Cloud o Global Cache
+     o Global Proxy o Public Cloud o simili con sempre
+     & Universal Resource
+     ...............
+     ..
+     ..
+     ..
+     .....
+     ....
+     ..
+     .........
+...........................
+.........................
+............................
+...........................     
+     
+     
+     
+     
+     .</p>
+      </section>                     
+                    <section>
+      <h3> da URL a UR</h3>
+     <p>da Uniform Resoure Locator a Universal Resource.............
+     ...............
+     ..........</p>
+      </section>   
+           <section>
+      <h3>licenza poetica</h3>
+     <p>già glop 
+- gommalayout opzioni -
+ jedmo 2010 -
+  leftFREE - 
+  licenza poetica nuova
+  ora rivisto esogeomedismo 2018</p>
+      </section>   
+           <section>
+      <h3> ...</h3>
+     <p>.............
+     ...............
+     ..........</p>
+      </section>   
+           <section>
+      <h3> ...</h3>
+     <p>.............
+     ...............
+     ..........</p>
+      </section>   
+                        
+</div>
+<main>
+   <article>
+<h2 id="licenza">licenza poetica nuova</h2>
+<p>come la vecchia
+<br>
+da un librars:<br>
+</p>
+<p style="text-align:justify;">di africano<br>
+con licenza poetica nuova<br>
+di copiare le copie che vuoi<br>
+per librare copie di copie<br>
+e se ascolti e pure tu approvi<br>
+questa voce libera copie<br>
+che ti dà delle mie ora tue<br>
+anche a te e tu le puoi dar<br>
+/\/\/\/|__|||||(\/)|||||__/\/\/\/|_/<br>
+di africano<br>
+[da circa aprile 2008](correggibile, derivabile, integrabile[ma anche no - eso 2018]) 
+Jerry Masslo II</p>
+   
+   </article>
+
+</main>
+
+</div>
+<footer>
+un piede e altro ... ...
+tipo torna <a id="basso" href="#alto" onclick="smoothScroll('alto');return false;">su</a>
+</footer>
+
+
+
+<!-- Jerry Masslo di mondoquarto.org settembre 2005 Opzioni per Piastrine Logorroiche 
+riadattato molto marzo 2010-->
+<!-- ripreso da esogeomedismo 2018 -->
+
+
+<script  src="js/fonZbetaZero2.js"></script>
+<script  src="js/CaratteriProve2.js"></script>
+
+
+<div id="stilante">
+ <a title="fonZ cerca tra i caratteri installati" href="javascript:configura()"><span class="effe">f</span><span class="oo">o</span><span class="enne">N</span><span class="zeta" id="alto">Z</span> </a>
+ <br/>
+ <h4 id="nojs">fonZ <br> chiede <br>javascript </h4>
+<script>nojs()</script>
+</div>
+
+  <div id="opzioni" class="drag">
+  <script>opzioni()</script>
+   <ul class="caratteri">
+<li id="risc"></li>
+<li id="cisc"></li>
+</ul>
+<br class="clear">
+  <p id="infonz">info</p>
+   
+
+<p id="glop" >
+
+<!-- onclick="chiudiStili(this)" -->
+  <a href="#licenza"  onclick="chiudiStili(this);smoothScroll('licenza');return false;" >FREED</a>
+  </p>
+   <ul id="caratterizza"><li><a style="font-weight: bold;" href="javascript:progressivo()">hello cerco caratteri</a></li>
+   <li>
+fonZ prova alcuni caratteri e se il browser risponde a tono li offre all'utente  
+   </li>
+
+</ul>
+</div>
+
+    
+</body>
+
+</html>
