@@ -5,14 +5,14 @@ among those found<br>
 which one to use<br>
 for the website<br>
 
-/ html css javascript <hr>
-Usage
+### html css javascript <hr>
 
 fonZ for now has 4 files<br>
 1 html example page with css embedded for the page and fonZ<br>
 2 js one for fonZ application and the other for a list of fonts - only the name<br>
 1 image svg optional for the background<br><br>
 
+## Usage
 download the files and put the scripts in a folder named js<br>
 and the image in his img folder<br>
 or use other names or locations and change the links in the example page<br>
@@ -23,21 +23,19 @@ without server fonZ loss some functions and the user cannot save his choice<br>
 because fonZ need some cookie for stored the name of fonts found<br>
 if it find something<br><br>
 
-Usage without the example page<br>
+## Usage without the example page<br>
 
 put the code at bottom of example page in your page<br>
 put the css code of fonZ in a css file or embedd it<br>
-link the scripts<br><br>
+link the scripts<br>
 done<br><br>
 
-
-Add other name fonts<br>
+## Add other name fonts<br>
 
 add the names to the script for fonts where are stored the existing fonts and in the same format i.e. 'a fonts','another','serif','etc etc',<br><br>
 
-for now fonZ support until .. <br>
-
-pause...
+for now fonZ support until 324 fonts <br>
+but is quite simple enlarge that limit
 
 
 demo: https://esogeomedismo.org/fonZ/fonZbetazero.html <hr>
