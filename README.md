@@ -51,5 +51,5 @@ but is quite simple enlarge that limit <br>
 
 demo: https://fonz.esogeomedismo.org/ should have the most recent version
 
-##this version beta zero 2 is retirede because bugged
+## this version beta zero 2 is labelled bugged
 use the newest instead
