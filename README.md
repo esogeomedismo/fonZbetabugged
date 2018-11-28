@@ -5,8 +5,10 @@ among those found<br>
 which one to use<br>
 for the website<br>
 
-### html css javascript <hr>
+## but this version beta zero 2 is retired because bugged
 
+
+### html css javascript <hr>
 fonZ for now has 4 files<br>
 1 html example page with css embedded for the page and fonZ<br>
 2 js one for fonZ application and the other for a list of fonts - only the name<br>
@@ -47,12 +49,7 @@ for now fonZ support until 324 fonts <br>
 but is quite simple enlarge that limit <br>
 
 
-demo: https://esogeomedismo.org/fonZ/fonZbetazero.html <hr>
-new demo: https://fonz.esogeomedismo.org/
-a couple of images of fonZ in motion:
+demo: https://fonz.esogeomedismo.org/ should have the most recent version
 
-
-![Image of fonZ in motion 1](https://fonz.esogeomedismo.org/img/fonZaction1.png)
-
-![Image motion 2](https://fonz.esogeomedismo.org/img/fonZaction2.png)
-
+##this version beta zero 2 is retirede because bugged
+use the newest instead
